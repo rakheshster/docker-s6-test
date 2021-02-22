@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+    s6-test:
+      build:
+        dockerfile: Dockerfile
+        context: .
+        args:
+          # works in this version
+          # BASE_VERSION: 3.12-2.0.0.1
+          # broken in this version
+          BASE_VERSION: 3.13-2.2.0.3
+      container_name: s6-test
